@@ -11,12 +11,15 @@
 # run()
 
 #优化方案
+
 import os
 import sys
+from conf import settings
 #print(__file__) #当前文件的绝对路径 F:/pycharmworkspace/mutest/bin/start.py
 #print(os.path.dirname(__file__)) #F:/pycharmworkspace/mutest/bin
-Base_DIR= os.path.dirname(os.path.dirname(__file__)) #F:/pycharmworkspace/mutest 成了
-sys.path.append(Base_DIR)
+#Base_DIR= os.path.dirname(os.path.dirname(__file__)) #F:/pycharmworkspace/mutest 成了
+#sys.path.append(Base_DIR)
+sys.path.append(settings.BASE_DIR)  #即使是参数也需要点来获取参数
 
 from core import scr
 
